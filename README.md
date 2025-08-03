@@ -1,7 +1,7 @@
 # Deploy Java Microservices Application on VMs using Vagrant
 
 ## Introduction
-This project demonstrates how to deploy a **multi-tier Java microservices application** on separate virtual machines using **Vagrant** IaC tool and **VirtualBox**.
+This project demonstrates the deployment of a multi-tier Java microservices application on separate virtual machines using Vagrant IaC tool and VirtualBox.
 
 <img width="627" height="303" alt="image" src="https://github.com/user-attachments/assets/fdde26cf-ab8d-4fbc-ae52-6b9b440aa075" />
 
@@ -31,7 +31,7 @@ The application architecture is composed of 5 microservices, each one will be de
   ```bash
   vagrant plugin install vagrant-hostmanager
 
-- Start creating VMs:
+- Start creating VMs
   ```bash
   vagrant up
 
