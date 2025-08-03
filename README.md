@@ -55,13 +55,13 @@ The application architecture is composed of 5 microservices, each one will be de
 ### Load Balancer (web01)
 
 ## Packaging Vagrant Boxes
-Packaging each VM, i.e., converting it to a Vagrant Box:
-```bash
-  vagrant package db01 --output web01.box
-  vagrant package mc01 --output mc01.box
-  vagrant package rmq01 --output rmq01.box
-  vagrant package app01 --output app01.box
-  vagrant package web01 --output web01.box
+- Packaging each VM, i.e., converting it to a Vagrant Box:
+  ```bash
+    vagrant package db01 --output web01.box
+    vagrant package mc01 --output mc01.box
+    vagrant package rmq01 --output rmq01.box
+    vagrant package app01 --output app01.box
+    vagrant package web01 --output web01.box
 
 ## Uploading Boxes to Vagrant Cloud
 - Log in to Vagrant Cloud.
