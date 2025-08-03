@@ -42,7 +42,6 @@ Vagrant.configure("2") do |config|
     app01.vm.hostname = "app01"
     app01.vm.network "private_network", ip: "192.168.56.12"
     app01.vm.provider "virtualbox" do |vb|
-     vb.gui = true
      vb.memory = "6144"
     end
   end
@@ -54,7 +53,6 @@ Vagrant.configure("2") do |config|
     web01.vm.hostname = "web01"
     web01.vm.network "private_network", ip: "192.168.56.11"
     web01.vm.provider "virtualbox" do |vb|
-     vb.gui = true
      vb.memory = "2048"
    end
   end
