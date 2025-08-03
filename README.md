@@ -47,8 +47,9 @@ vagrant ssh db01
 
 #### Message Queue (rmq01)
 
+#### Application (app01)
 
-
+#### Load Balancer (web01)
 
 o	To package a VM, i.e., converting it to a Vagrant Box, navigate to the project directory and start packaging each VM as follows:
 	# vagrant package db01 --output web01.box
@@ -56,7 +57,3 @@ o	To package a VM, i.e., converting it to a Vagrant Box, navigate to the project
 o	It is worth noting that the packing process will force shutting down the VM.
 o	Now, after you have the “.box” file of each VM, we will upload these files on Vagrant Cloud account.
 o	From Vagrant Cloud account, create a box, define it, add a version, add a provider (for instance: VirtualBox), upload the image/box file, then release it.
-
-#### Application (app01)
-
-#### Load Balancer (web01)
