@@ -9,10 +9,26 @@ The application architecture is composed of 5 microservices, each one will be de
 |-----------------|------------------------|-------------|
 | Load Balancer   | Nginx                  | `web01`     |
 | Application     | Java 11 + Maven + Tomcat| `app01`     |
-| Database        | MariaDB                | `db01`      |
-| Cache           | Memcached              | `mc01`      |
 | Message Queue   | RabbitMQ                | `rmq01`     |
+| Cache           | Memcached              | `mc01`      |
+| Database        | MariaDB                | `db01`      |
+
 
 ## Requirements
 - [VirtualBox](https://www.virtualbox.org/)
 - [Vagrant](https://www.vagrantup.com/)
+- Vagrant plugins.
+
+## Setup and Deployment
+
+### VMs Provisioning
+
+#### Database (db01)
+
+#### Cache (mc01)
+
+#### Message Queue (rmq01)
+
+#### Application (app01)
+
+#### Load Balancer (web01)
