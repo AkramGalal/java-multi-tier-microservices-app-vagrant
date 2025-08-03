@@ -26,7 +26,8 @@ The application architecture is composed of 5 microservices, each one will be de
 ## Setup and Deployment
 - Clone the repository
 - Install Vagrant plugins
-'vagrant plugin install vagrant-hostmanager'
+```bash
+vagrant plugin install vagrant-hostmanager
 
 - Start creating VMs:
 'vagrant up'
