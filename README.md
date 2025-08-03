@@ -16,6 +16,3 @@ The application architecture is composed of 5 microservices, each one will be de
 ## Requirements
 - [VirtualBox](https://www.virtualbox.org/)
 - [Vagrant](https://www.vagrantup.com/)
-- Vagrant plugin:
-  ```bash
-  vagrant plugin install vagrant-hostmanager
