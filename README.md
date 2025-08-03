@@ -1,6 +1,6 @@
 # Java Microservices on Vagrant VMs
 
-This project demonstrates how to deploy a **multi-tier Java microservices application** on separate Virtual Machines using **Vagrant** and **VirtualBox**.
+This project demonstrates how to deploy a **multi-tier Java microservices application** on separate Virtual Machines using **Vagrant** IaC tool and **VirtualBox**.
 
 ## Architecture
 The application architecture is composed of 5 microservices, each one will be deployed on a separate VM, they are:
