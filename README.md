@@ -1,7 +1,7 @@
 # Deploy Java Microservices Application on VMs using Vagrant
 
 ## Introduction
-This project demonstrates how to deploy a **multi-tier Java microservices application** on separate Virtual Machines using **Vagrant** IaC tool and **VirtualBox**.
+This project demonstrates how to deploy a **multi-tier Java microservices application** on separate virtual machines using **Vagrant** IaC tool and **VirtualBox**.
 
 <img width="627" height="303" alt="image" src="https://github.com/user-attachments/assets/fdde26cf-ab8d-4fbc-ae52-6b9b440aa075" />
 
@@ -24,36 +24,53 @@ The application architecture is composed of 5 microservices, each one will be de
 - Vagrant plugins.
 
 ## Setup and Deployment
-- Clone the repository
-- Install Vagrant plugins
-
-vagrant plugin install vagrant-hostmanager
+- Install VirtualBox.
+- Install Vagrant.
+- Clone the repository.
+- Install Vagrant plugins.
+  ```bash
+  vagrant plugin install vagrant-hostmanager
 
 - Start creating VMs:
-vagrant up'
+  ```bash
+  vagrant up
 
 - Access each VM via SSH:
-vagrant ssh web01
-vagrant ssh app01
-vagrant ssh rmq01
-vagrant ssh mc01
-vagrant ssh db01
+  ```bash
+  vagrant ssh web01
+  vagrant ssh app01
+  vagrant ssh rmq01
+  vagrant ssh mc01
+  vagrant ssh db01
 
-### VMs Provisioning
+## VMs Provisioning
+### Database (db01)
+  
+### Cache (mc01)
+  
+### Message Queue (rmq01)
+  
+### Application (app01)
+  
+### Load Balancer (web01)
 
-#### Database (db01)
+## Packaging Vagrant Boxes
+Packaging each VM, i.e., converting it to a Vagrant Box:
+```bash
+  vagrant package db01 --output web01.box
+  vagrant package mc01 --output mc01.box
+  vagrant package rmq01 --output rmq01.box
+  vagrant package app01 --output app01.box
+  vagrant package web01 --output web01.box
 
-#### Cache (mc01)
+## Uploading Boxes to Vagrant Cloud
+- Log in to Vagrant Cloud.
+- Upload the ".box" file for each VM.
 
-#### Message Queue (rmq01)
+### Built Boxes
+- [web01](https://portal.cloud.hashicorp.com/services/vagrant/registries/multi-tier-java-web-app-project1-boxes/boxes/web01?project_id=f92dac97-833c-445f-b97f-2d0948d624c9)
+- [app01](https://portal.cloud.hashicorp.com/services/vagrant/registries/multi-tier-java-web-app-project1-boxes/boxes/app01?project_id=f92dac97-833c-445f-b97f-2d0948d624c9)
+- [rmq01](https://portal.cloud.hashicorp.com/services/vagrant/registries/multi-tier-java-web-app-project1-boxes/boxes/rmq01?project_id=f92dac97-833c-445f-b97f-2d0948d624c9)
+- [mc01](https://portal.cloud.hashicorp.com/services/vagrant/registries/multi-tier-java-web-app-project1-boxes/boxes/mc01?project_id=f92dac97-833c-445f-b97f-2d0948d624c9)
+- [db01](https://portal.cloud.hashicorp.com/services/vagrant/registries/multi-tier-java-web-app-project1-boxes/boxes/db01?project_id=f92dac97-833c-445f-b97f-2d0948d624c9)
 
-#### Application (app01)
-
-#### Load Balancer (web01)
-
-o	To package a VM, i.e., converting it to a Vagrant Box, navigate to the project directory and start packaging each VM as follows:
-	# vagrant package db01 --output web01.box
-	# vagrant package mc01 --output mc01.box
-o	It is worth noting that the packing process will force shutting down the VM.
-o	Now, after you have the “.box” file of each VM, we will upload these files on Vagrant Cloud account.
-o	From Vagrant Cloud account, create a box, define it, add a version, add a provider (for instance: VirtualBox), upload the image/box file, then release it.
