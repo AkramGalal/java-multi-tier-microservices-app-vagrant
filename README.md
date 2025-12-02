@@ -203,7 +203,7 @@ mvn install
 
 # Deploy artifact
 systemctl stop tomcat
-rm -rf /usr/local/tomcat/webapps/ROOT*
+rm -rf /usr/local/tomcat/webapps/ROOT
 cp target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 systemctl start tomcat
 chown tomcat.tomcat /usr/local/tomcat/webapps -R
